@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <!--<link rel="manifest" href="/site.webmanifest">-->
+    <link rel="stylesheet" href="css/landing.css">
+    <title>Naukri_Shala</title>
+</head>
+<body onLoad="myFunction()">
+    <!--<p>landing page<span id="email"></span></p>-->
+    <section class="top-banner" >
+        <div class="top-banner-overlay" >
+          <h1 style="font-size:43px;">नौकरी शाला</h1>
+          <p style="font-size:35px;">A one stop solution to your headaches of finding a job. <br>
+              Just 6 steps
+              <br>
+              <br>
+              <ul>
+                  <li>1️⃣ Register with us</li>
+                  <li>2️⃣ Tell us about yourself</li>
+                  <li>3️⃣ Wander through our website for easy,category wise jobs</li>
+                  <li>4️⃣ Create a resume with us</li>
+                  <li>5️⃣ Get personalized job recommendations</li>
+                  <li>6️⃣ Get notifications via Gmail!</li>
+              </ul>
+          </p>
+        </div>
+      </section>
+
+
+      <nav class="top-nav">
+        <div class="menu-wrapper">
+            <button class="menu-close" aria-label="close menu">✕</button> <br><br>
+          <ul class="menu">
+            <li> 
+              <a href="landing.html">◼️ Home</a>
+            </li>
+            
+            <li>
+              <a href="more_about.html">◼️ More about me!</a>
+            </li>
+            <li>
+                <a href="resume.html">◼️ Create Naukri-Ready Resume</a>
+              </li>
+            <li>
+                <a href="all_jobs.html">◼️ Jobs</a>
+                <ul class="sub-menu">
+                  <li>
+                    <a href="#">— Location</a>
+                  </li>
+                  <li>
+                    <a href="#">— Qualification</a>
+                  </li>
+                  <li>
+                    <a href="#">— Last Date</a>
+                  </li>
+                  <li>
+                    <a href="#">— Post Name</a>
+                  </li>
+                  <li>
+                    <a href="#">— Recruitment Board</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="chat.html">◼️ Chat</a>
+              </li>
+              <li>
+                <a href="doubts.html">◼️ Doubts?</a>
+              </li>
+            <li>
+                <a href="about.html">◼️ About</a>
+              </li>
+            <li>
+              <a href="contact.html">◼️ Find me?</a>
+            </li>
+            <li>
+                <a href="" onclick="openWin()">◼️ Watch a Video</a>
+              </li>
+          </ul>
+          
+        </div>
+        <div class="fixed-menu">
+          <!--<h2 class="logo">LOGO</h2>-->
+          <button class="menu-open" aria-label="open menu">☰</button>
+          <!--<ul class="socials">
+            <li>
+              <a href="">facebook</a>
+            </li>
+            <li>
+              <a href="">twitter</a>
+            </li>
+            <li>
+              <a href="">instagram</a>
+            </li>
+          </ul>-->
+        </div>
+      </nav>
+    <script>
+        let x = document.cookie.split("=");
+        console.log(x)
+        //document.getElementById("email").innerText=x[1];
+
+        const menuOpen = document.querySelector(".top-nav .menu-open");
+        const menuClose = document.querySelector(".top-nav .menu-close");
+        const menuWrapper = document.querySelector(".top-nav .menu-wrapper");
+        const topBannerOverlay = document.querySelector(".top-banner-overlay");
+        const size=Math.sqrt(250000)
+        function openWin() {
+            myWindow = window.open("https://www.youtube.com/watch?v=42fxTOHvIUA", "_blank", "width="+size+","+"height="+size);
+        }
+
+        function myFunction(){
+            let myVar=setTimeout(setAlert, 2000);
+        }
+        function toggleMenu() {
+            menuOpen.addEventListener("click", () => {
+                
+                menuWrapper.classList.add("is-opened");
+                topBannerOverlay.classList.add("is-moved");
+            });
+            
+            menuClose.addEventListener("click", () => {
+                menuWrapper.classList.remove("is-opened");
+                topBannerOverlay.classList.remove("is-moved");
+            });
+        }
+
+        function setAlert() {
+            const d = new Date();
+            alert("It has been 5 minutes since you are here!Yay 💝"+" "+d)
+            clearTimeout(myVar);
+        }
+
+        toggleMenu();
+    </script>
+</body>
+</html>

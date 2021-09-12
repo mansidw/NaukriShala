@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+ 
+* {
+    box-sizing: border-box;
+    font-family: 'Poiret One', cursive;
+    
+  }
+  body {
+    height: 100vh;
+    background-color: #93B5C6;
+    background: url("../img/more_about.png") no-repeat center / cover;
+  }
+  
+  .sub-menu{
+    padding: 5px 0 0 7px;
+    margin-top: 5px;
+  }
+  .menu-wrap {
+    position: fixed;
+    right: 0;
+    z-index: 1001;
+    width: 300px;
+    height: 100%;
+    padding: 40px;
+    background-color: #C1CFC0;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    transition: all 0.5s cubic-bezier(0.7,0,0.3,1);
+    transform: translate3d(360px,0,0);
+  }
+  .menu-wrap.active {
+    transform: translate3d(0px,0,0);
+  }
+  
+  .menu-wrap .menu .icon-list a {
+    position: relative;
+    font-family: 'Poiret One', cursive;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    transition: all 0.3s ease;
+  }
+  .menu-wrap .menu .icon-list a::before {
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 2px;
+    top: 80%;
+    transition: all 0.3s ease;
+  }
+  .menu-wrap .menu .icon-list a:hover {
+    color: #00A19D;
+  }
+  .menu-wrap .menu .icon-list a:hover::before {
+    width: 50%;
+    background-color: #00A19D;
+  }
+  /* Buttons */
+  .menu-button, 
+  .close-button {
+    position: fixed;
+    top: 50px;
+    width: 50px;
+    height: 50px;
+    background-color: #D4ECDD;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  }
+  .menu-button {
+    right: 0px;
+    z-index: 102;
+  }
+  .close-button {
+    left: -50px;
+    z-index: 100;
+  }
+  /* Content */
+  .content {
+    text-align: center;
+    color: #282828;
+    padding-top: 80px;
+  }
+  .content h2 {
+    position: relative;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    font-size: 35px;
+    font-family: 'Poiret One', cursive;
+  }
+  .content h2::after {
+    position: absolute;
+    content: "";
+    width: 100px;
+    height: 2px;
+    background-color: #222;
+    bottom: -15px;
+    left: 50%;
+    margin-left: -50px;
+  }
+  .content p {
+    width: 80%;
+    margin: 10px auto;
+    line-height: 1.85;
+    color: #444;
+    font-family: 'Poiret One', cursive;
+  }
+
+
+/* my code new */
+
+
+  h1 {
+    font-size: 60px;
+    margin: 0px;
+    padding: 0px;
+    color:white;
+  }
+  h3 {
+    margin: 0px;
+    padding: 0px;
+    color: white;
+  }
+  
+  div.wrap {
+    padding: 25px;
+    background-color: #000;
+    /*color: #fff;*
+    /*box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);*/
+    width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    vertical-align: middle;
+    border-radius: 20px;
+    box-shadow: 10px 10px rgba(0,0,0,.24);
+  }
+  
+  div.wrap div {
+    position: relative;
+    margin: 20px 0;
+  }
+  
+  label {
+    position: absolute;
+    top: 0;
+    font-size: 25px;
+    margin: 10px;
+    padding: 0 5px;
+    background-color: teal;
+    -webkit-transition: top .2s ease-in-out, 
+                        font-size .2s ease-in-out;
+    transition: top .2s ease-in-out, 
+                font-size .2s ease-in-out;
+  }
+  
+  .active {
+    top: -25px;
+    font-size: 20px;
+  }
+  
+  input[type=text] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid white;
+    font-size: 20px;
+    background-color: teal;
+    color: white;
+  } 
+  
+  input[type=text]:focus {
+    outline: none;
+  }

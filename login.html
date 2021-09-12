@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <!--<link rel="manifest" href="/site.webmanifest">-->
+    <link rel="stylesheet" href="css/login.css">
+    <script defer src="js/login.js"></script>
+    <title>Naukri_Shala</title>
+</head>
+<body>
+    <div class="form-structor">
+        
+        <div class="signup">
+            <h2 class="form-title" id="signup"><span>or</span>Sign Up</h2>
+            <div class="form-holder">
+                <input type="text" class="input" placeholder="Name" />
+                <input type="email" class="input" placeholder="Email" />
+                <input type="password" class="input" placeholder="Password" />
+            </div>
+            <button class="submit-btn">Sign Up</button>
+        </div>
+
+        <div class="login slide-up">
+            <div class="center">
+                <h2 class="form-title" id="login"><span>or</span>Log in</h2>
+
+                <form class="form-holder" id="login1">
+                    <input type="email" class="input" placeholder="Email" id="email" name="email"/>
+                    <input type="password" class="input" placeholder="Password" id="password" name="password"/>
+                    <button class="submit-btn" type="submit">Log in</button>
+                </form>
+                <p id="error" style="background-color:#93B5C6 ; color: black; height: 30px; text-align: center;font-size: 20px; display: none;"></p>
+            </div>
+        </div>
+       
+    </div>
+    <script>
+        //console.clear();
+        const loginBtn = document.getElementById('login');
+        const signupBtn = document.getElementById('signup');
+
+        loginBtn.addEventListener('click', (e) => {
+            let parent = e.target.parentNode.parentNode;
+            Array.from(e.target.parentNode.parentNode.classList).find((element) => {
+                if(element !== "slide-up") {
+                    parent.classList.add('slide-up')
+                }else{
+                    signupBtn.parentNode.classList.add('slide-up')
+                    parent.classList.remove('slide-up')
+                }
+            });
+        });
+
+        signupBtn.addEventListener('click', (e) => {
+            let parent = e.target.parentNode;
+            Array.from(e.target.parentNode.classList).find((element) => {
+                if(element !== "slide-up") {
+                    parent.classList.add('slide-up')
+                }else{
+                    loginBtn.parentNode.parentNode.classList.add('slide-up')
+                    parent.classList.remove('slide-up')
+                }
+            });
+        });
+    </script>
+</body>
+</html>

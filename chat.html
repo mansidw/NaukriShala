@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" crossorigin="anonymous"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <!--<link rel="manifest" href="/site.webmanifest">-->
+    <link rel="stylesheet" href="css/chat.css">
+    <title>Naukri_Shala</title>
+</head>
+<body>
+    <div class="menu-wrap">
+        <nav class="menu">
+          <div class="icon-list">
+            <a href="landing.html">◼️ Home</a>
+            <a href="more_about.html">◼️ More about me!</a>
+            <a href="resume.html">◼️ Create Naukri-Ready Resume</a>
+            <a href="all_jobs.html">◼️ Jobs</a>
+            <ul class="sub-menu">
+                <a href="#">— Location</a>
+                <a href="#">— Qualification</a>
+                <a href="#">— Last Date</a>
+                <a href="#">— Post Name</a>
+                <a href="#">— Recruitment Board</a>
+              </ul>
+              <a href="about.html">◼️ About</a>
+              <a href="doubts.html">◼️ Doubts?</a>
+            <a href="contact.html">◼️ Find Me?</a>
+          </div>
+          <button class="close-button" id="close-button">X</button>
+        </nav>
+      </div>
+      <button class="menu-button fa fa-bars" id="open-button">
+      </button>
+      
+      <div class="content">
+        <h2>Have doubts?</h2>
+        <p style="padding-top:10px; font-size:30px;font-weight: bold;">Ask here, there are many listening!<br /> 
+        </p>
+
+        <section class="dark" style="padding-bottom: 20px;">
+            <div class="container py-4">
+               
+                <article class="postcard dark blue">
+                    <a class="postcard__img_link" href="#">
+                        <img class="postcard__img" src="https://picsum.photos/1000/1000" alt="Image Title" />
+                    </a>
+                    <div class="postcard__text">
+                        <h1 class="postcard__title blue" style="font-size:50px;"><a href="#">Question Title</a></h1>
+                        <div class="postcard__subtitle small" style="font-size:20px;">
+                            <time datetime="2021-09-13 12:00:00">
+                                <i class="fas fa-calendar-alt mr-2"></i>Mon, September 13th 2021
+                            </time>
+                        </div>
+                        <div class="postcard__bar"></div>
+                        <div class="postcard__preview-txt" style="font-size:20px;">
+                            In this section I aim to use a chat api where every registeres user can chat through his/her username and also upload images, documents for ref.
+                        </div>
+                        <ul class="postcard__tagbox">
+                            <li class="tag__item" style="font-size:20px;">👍 UpVote</li>
+                            <li class="tag__item" style="font-size:20px;">👎 DeVote</li>
+                            <li class="tag__item" style="font-size:20px;">🖐️ Answer</li>
+                        </ul>
+                    </div>
+                </article>
+
+
+                <!--<article class="postcard dark red">
+                    <a class="postcard__img_link" href="#">
+                        <img class="postcard__img" src="https://picsum.photos/501/500" alt="Image Title" />	
+                    </a>
+                    <div class="postcard__text">
+                        <h1 class="postcard__title red"><a href="#">Podcast Title</a></h1>
+                        <div class="postcard__subtitle small">
+                            <time datetime="2020-05-25 12:00:00">
+                                <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                            </time>
+                        </div>
+                        <div class="postcard__bar"></div>
+                        <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+                        <ul class="postcard__tagbox">
+                            <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+                            <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+                            <li class="tag__item play red">
+                                <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+
+
+                <article class="postcard dark green">
+                    <a class="postcard__img_link" href="#">
+                        <img class="postcard__img" src="https://picsum.photos/500/501" alt="Image Title" />
+                    </a>
+                    <div class="postcard__text">
+                        <h1 class="postcard__title green"><a href="#">Podcast Title</a></h1>
+                        <div class="postcard__subtitle small">
+                            <time datetime="2020-05-25 12:00:00">
+                                <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                            </time>
+                        </div>
+                        <div class="postcard__bar"></div>
+                        <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+                        <ul class="postcard__tagbox">
+                            <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+                            <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+                            <li class="tag__item play green">
+                                <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+
+
+                <article class="postcard dark yellow">
+                    <a class="postcard__img_link" href="#">
+                        <img class="postcard__img" src="https://picsum.photos/501/501" alt="Image Title" />
+                    </a>
+                    <div class="postcard__text">
+                        <h1 class="postcard__title yellow"><a href="#">Podcast Title</a></h1>
+                        <div class="postcard__subtitle small">
+                            <time datetime="2020-05-25 12:00:00">
+                                <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                            </time>
+                        </div>
+                        <div class="postcard__bar"></div>
+                        <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+                        <ul class="postcard__tagbox">
+                            <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+                            <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+                            <li class="tag__item play yellow">
+                                <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+                            </li>
+                        </ul>
+                    </div>
+                </article>-->
+
+
+            </div>
+        </section>
+
+      </div>
+
+
+      <script>
+
+          (function($) {
+            "use strict";
+            var openBtn = $("#open-button"),
+                colseBtn = $("#close-button"),
+                menu = $(".menu-wrap");
+            // Open menu when click on menu button
+            openBtn.on("click", function() {
+                menu.addClass("active");
+            });
+            // Close menu when click on Close button
+            colseBtn.on("click", function() {
+                menu.removeClass("active");
+            });
+            // Close menu when click on anywhere on the document
+            $(document).on("click", function(e) {
+                var target = $(e.target);
+                if (target.is(".menu-wrap, .menu, .icon-list, .icon-list a, .icon-list a span, #open-button") === false) {
+                menu.removeClass("active");
+                e.stopPropagation();
+                }
+            });
+            })(jQuery);
+
+      </script>
+      
+</body>
+</html>
